@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>SKLT Studio</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#" id="homeNavLink">SKLT<span class="accent"> </span>STUDIO</a>
+                </div>
+                <div class="nav-links">
+                    <a href="#" id="navHome" class="active">Главная</a>
+                    <a href="#" id="navProjects">Проекты</a>
+                    <a href="#" id="navReviews">Отзывы</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= ГЛАВНАЯ СТРАНИЦА ================= -->
+        <div id="homePage">
+            <div class="container">
+                <!-- Логотип с неоновым аутлайном -->
+                <div class="hero-logo">
+                    <div class="neon-wrapper">
+                        <div class="neon-logo">
+                            <img src="images/logo2.png" alt="SKLT Studio Logo" onerror="this.src='https://placehold.co/400x200/1a0a0e/ff2d55?text=SKLT+STUDIO'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- История студии -->
+                <section class="info-block">
+                    <h2 class="section-title"><span class="glow">Из гаража — в инди</span></h2>
+                    <div class="story-card">
+                        <p><i class="fas fa-tools"></i> SKLT Studio родилась в тесном гараже, где по ночам при свете ламп создавались первые хоррор-прототипы. Что началось как эксперимент энтузиаста, постепенно перерастает в независимую студию, которая не боится экспериментировать с жанрами, атмосферой и безумными идеями. Мы до сих пор стараемся хранить дух того самого гаража, чтобы игры были ламповыми и атмосферными.</p>
+                    </div>
+                </section>
+
+                <!-- Достижения -->
+                <section class="info-block">
+                    <h2 class="section-title"><span class="glow">Наши цифры</span></h2>
+                    <div class="stats-wrapper">
+                        <div class="stat-item">
+                            <div class="stat-number">40+</div>
+                            <div class="stat-label">постоянных игроков</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2280+</div>
+                            <div class="stat-label">интересовались играми на Itch.io</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">670+</div>
+                            <div class="stat-label">скачиваний на Itch.io</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3 лучших проекта -->
+                <section class="info-block">
+                    <h2 class="section-title"><span class="glow">Лучшие проекты</span></h2>
+                    <div class="featured-projects">
+                        <div class="featured-card">
+                            <div class="featured-icon"><i class="fas fa-ghost"></i></div>
+                            <h3>Five Nights at Freddy's 3 Remake</h3>
+                            <p class="featured-desc">Ремастер культового хоррора. Управляйте камерами и выживайте в обновлённой атмосфере ужаса.</p>
+                            <a href="https://sklt-studio.itch.io/five-nights-at-freddys-3-remake" target="_blank" class="featured-link">Страница на Itch.io →</a>
+                        </div>
+                        <div class="featured-card">
+                            <div class="featured-icon"><i class="fas fa-robot"></i></div>
+                            <h3>The Curse Of Tryton</h3>
+                            <p class="featured-desc">Вы попытались устроиться в корпорацию Tryton INC, но что-то пошло не так, а вокруг ни души. Исследуйте полузаброшенный завод и раскройте все тайны этого места.</p>
+                            <a href="https://sklt-studio.itch.io/the-curse-of-tryton" target="_blank" class="featured-link">Страница на Itch.io →</a>
+                        </div>
+                        <div class="featured-card">
+                            <div class="featured-icon"><i class="fas fa-skull"></i></div>
+                            <h3>Markot's Nightmare</h3>
+                            <p class="featured-desc">Злой Cheter украл весь запас травы Маркота. Верните украденное в безумном приключении. <strong>Активно ведётся разработка сюжетного дополнения!</strong></p>
+                            <a href="https://sklt-studio.itch.io/markots-nightmare" target="_blank" class="featured-link">Страница на Itch.io →</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ================= СТРАНИЦА ПРОЕКТОВ ================= -->
+        <div id="projectsPage" style="display: none;">
+            <div class="container">
+                <div class="projects-header">
+                    <h2 class="section-title"><span class="glow">Наши проекты</span></h2>
+                    <p class="projects-subtitle">Все проекты SKLT Studio в одном месте</p>
+                </div>
+                <div class="projects-grid" id="projectsContainer">
+                    <!-- Проекты загружаются через JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= СТРАНИЦА ОТЗЫВОВ ================= -->
+        <div id="reviewsPage" style="display: none;">
+            <div class="container">
+                <div class="reviews-header">
+                    <h2 class="section-title"><span class="glow">Отзывы пользователей</span></h2>
+                </div>
+
+                <!-- Плашка со средним баллом -->
+                <div class="rating-summary" id="ratingSummary">
+                    <div class="rating-score">
+                        <span class="avg-number" id="avgRating">0.0</span>
+                        <span class="avg-star"><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="rating-instruction">
+                        <i class="fas fa-info-circle"></i> Чтобы оставить отзыв, можете написать под конкретной игрой на Itch.io или в личные сообщения пользователю @Uxtor7448 (доступен в телеграме и дискорде), с указанием проекта на который вы пишите отзыв, кол-во звёзд оценки и самого отзыва. Позже этот отзыв будет добавлен на эту страницу.
+                    </div>
+                </div>
+
+                <!-- Сетка отзывов -->
+                <div class="reviews-grid" id="reviewsContainer">
+                    <!-- Отзывы загружаются через JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://t.me/sklt_studio" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://sklt-studio.itch.io/" target="_blank" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
+                    <a href="https://tiktok.com/@sklt.studio" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@SKLT_STUDIO" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.donationalerts.com/r/sklt_studio" target="_blank" aria-label="DonationAlerts"><i class="fas fa-donate"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>© 2026 SKLT STUDIO — рожденные в гараже, закалённые спиртом</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
