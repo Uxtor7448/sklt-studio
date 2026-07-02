@@ -1,6 +1,14 @@
 // ========== ДАННЫЕ ПРОЕКТОВ ==========
 const projectsData = [
     {
+        id: 7,
+        cover: "images/FE.png",
+        title: "Fractured Edges",
+        version: "V1",
+        description: "Короткая игра созданная для Myindie GameJam LVL10 на тему «Враг — это ты».",
+        link: "https://sklt-studio.itch.io/fractured-edges"
+    },
+    {
         id: 6,
         cover: "images/FNAF3R.png",
         title: "Five Nights at Freddy's 3 Remake",
