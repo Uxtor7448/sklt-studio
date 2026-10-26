@@ -60,14 +60,6 @@ const projectsData = [
 
 // ========== ДАННЫЕ ОТЗЫВОВ ==========
 const reviewsData = [
-        {
-        id: 1,
-        author: "stevegamer",
-        stars: 4,
-        text: "Выглядит прикольно, но я не любитель скримеров + чуть-чуть начало подташнивать, так что я даже первый уровень не прошёл. Но мне нравится, прям не просто игра, а целый эксперимент. Годот уважаю. Кроссплатформенность тоже круто, но мне лень было скачивать на телефон.",
-        gameTitle: "Sense Adapt",
-        gameLink: "https://sklt-studio.itch.io/sense-adapt"
-    },
     {
         id: 2,
         author: "Bonkmasta43",
@@ -75,7 +67,16 @@ const reviewsData = [
         text: "FINISHED! I really love the game!",
         gameTitle: "Five Nights at Freddy's 3 Remake",
         gameLink: "https://sklt-studio.itch.io/five-nights-at-freddys-3-remake"
+    },
+    {
+        id: 1,
+        author: "stevegamer",
+        stars: 4,
+        text: "Выглядит прикольно, но я не любитель скримеров + чуть-чуть начало подташнивать, так что я даже первый уровень не прошёл. Но мне нравится, прям не просто игра, а целый эксперимент. Годот уважаю. Кроссплатформенность тоже круто, но мне лень было скачивать на телефон.",
+        gameTitle: "Sense Adapt",
+        gameLink: "https://sklt-studio.itch.io/sense-adapt"
     }
+
 
 ];
 
