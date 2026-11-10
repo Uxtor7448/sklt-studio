@@ -4,18 +4,59 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'bold1';
+    src: url('ubuntu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg-tint: rgba(5, 0, 5, 0.95);
+    --bg-image: url('images/glitch1.gif');
+}
+
 body {
     background-color: #000000;
     color: #eaeef2;
-    font-family: 'Inter', sans-serif;
+    font-family: 'bold1', sans-serif;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    /* Гифка на фоне всего сайта, растянута по краям */
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Нужно для слоя --bg-tint поверх гифки */
+    position: relative;
+    isolation: isolate;
+}
+
+/* Цветной слой поверх гифки — подготовка под смену цвета */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: var(--bg-tint);
+    pointer-events: none;
+    z-index: -1;
+    transition: background 0.4s ease;
 }
 
 main {
     flex: 1;
+    position: relative;
+    z-index: 0;
+}
+
+header, footer {
+    position: relative;
+    z-index: 0;
 }
 
 a {
@@ -131,7 +172,7 @@ a {
 
 .neon-logo img {
     display: block;
-    max-width: 260px;
+    max-width: 500px;
     width: 100%;
     height: auto;
     border-radius: 24px;
@@ -142,9 +183,9 @@ a {
     content: '';
     position: absolute;
     inset: -3px;
-    border-radius: 28px;
+    border-radius: 0px;
     padding: 3px;
-    background: linear-gradient(180deg, #ff2d55, rgba(255, 45, 85, 0.5), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(180deg, #ff0059, rgb(255, 45, 220), rgba(0, 0, 0, 0.8));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -156,7 +197,7 @@ a {
 .story-card {
     background: #0b0b0b;
     border: 1px solid #1e1e1e;
-    border-radius: 1.5rem;
+    border-radius: 0.3rem;
     padding: 2rem;
     margin: 1rem 0;
     font-size: 1.1rem;
@@ -196,7 +237,7 @@ a {
     justify-content: space-between;
     gap: 1.5rem;
     background: #0a0a0c;
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: 2rem 1.5rem;
     border: 1px solid #1c1c1e;
     margin-bottom: 1rem;
@@ -244,7 +285,7 @@ a {
 .featured-card {
     background: linear-gradient(135deg, #110308, #0a0103);
     border: 1px solid #2a0a12;
-    border-radius: 1.5rem;
+    border-radius: 0.1rem;
     padding: 1.8rem;
     transition: 0.25s;
     display: flex;
@@ -253,8 +294,9 @@ a {
 }
 
 .featured-card:hover {
+    background: linear-gradient(135deg, #5c1728, #0e0611);
     transform: translateY(-5px);
-    border-color: #ff2d55;
+    border-color: #ffffff;
     box-shadow: 0 10px 25px -8px rgba(255, 45, 85, 0.3);
 }
 
@@ -289,8 +331,8 @@ a {
 }
 
 .featured-link:hover {
-    color: #ff779b;
-    border-bottom-color: #ff779b;
+    color: #ffffff;
+    border-bottom-color: #ffffff;
     transform: translateX(4px);
 }
 
@@ -304,7 +346,7 @@ a {
 
 .project-card {
     background: linear-gradient(95deg, #2a050f 0%, #1a0208 50%, #0a0103 100%);
-    border-radius: 1.5rem;
+    border-radius: 0.1rem;
     overflow: hidden;
     transition: 0.25s;
     border: 1px solid rgba(180, 30, 50, 0.4);
@@ -314,8 +356,9 @@ a {
 }
 
 .project-card:hover {
+    background: linear-gradient(45deg, #530b0b 0%, #000000 40%, #35094e 100%);
     transform: translateY(-6px);
-    border-color: #ff2d55;
+    border-color: #ffffff;
     box-shadow: 0 15px 30px -12px rgba(255, 45, 85, 0.25);
 }
 
@@ -345,7 +388,7 @@ a {
 
 .project-version {
     font-size: 0.75rem;
-    background: rgba(255, 45, 85, 0.25);
+    background: rgba(255, 28, 77, 0.67);
     padding: 0.2rem 0.6rem;
     border-radius: 40px;
 }
@@ -366,7 +409,7 @@ a {
     justify-content: center;
     gap: 8px;
     padding: 0.7rem;
-    border-radius: 2rem;
+    border-radius: 0.4rem;
     font-weight: 600;
     border: 1px solid rgba(255, 45, 85, 0.3);
     transition: all 0.2s;
@@ -374,8 +417,7 @@ a {
 }
 
 .project-link:hover {
-    background: #ff2d55;
-    color: #000;
+    background: #6e3143;
     transform: scale(0.98);
 }
 
@@ -390,7 +432,7 @@ a {
 .rating-summary {
     background: linear-gradient(135deg, #0a0a0c, #050508);
     border: 1px solid rgba(255, 45, 85, 0.4);
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
     padding: 1.5rem 2rem;
     margin: 1rem 0 2rem 0;
     display: flex;
@@ -408,9 +450,9 @@ a {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
-    background: rgba(255, 45, 85, 0.15);
+    background: rgba(150, 45, 255, 0.15);
     padding: 0.75rem 1.5rem;
-    border-radius: 3rem;
+    border-radius: 90rem;
     min-width: 120px;
     justify-content: center;
 }
@@ -467,8 +509,9 @@ a {
 }
 
 .review-card:hover {
+    background: linear-gradient(135deg, #140024, #000000);
     transform: translateY(-4px);
-    border-color: #ff2d55;
+    border-color: #ffffff;
     box-shadow: 0 10px 25px -8px rgba(255, 45, 85, 0.2);
 }
 
@@ -534,8 +577,8 @@ a {
 
 .review-game-name {
     font-size: 0.85rem;
-    color: #ff8faa;
-    background: rgba(255, 45, 85, 0.1);
+    color: #ffffff;
+    background: rgba(220, 255, 45, 0.1);
     padding: 0.3rem 0.8rem;
     border-radius: 2rem;
 }
@@ -555,7 +598,7 @@ a {
 }
 
 .review-game-link:hover {
-    background: #ff2d55;
+    background: #863fac;
     color: #000;
     transform: scale(0.98);
 }

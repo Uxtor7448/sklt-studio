@@ -36,7 +36,7 @@ const projectsData = [
         id: 3,
         cover: "images/MN.png",
         title: "Markot's Nightmare",
-        version: "V1.1st",
+        version: "V2.0ST",
         description: "Злой Cheter украл весь запас травы Маркота. Верните украденное в безумном приключении.",
         link: "https://sklt-studio.itch.io/markots-nightmare"
     },
@@ -176,7 +176,7 @@ function renderReviews() {
                 </div>
             </div>
             <div class="review-text">
-                "${escapeHtml(review.text)}"
+                ${escapeHtml(review.text)}
             </div>
             <div class="review-game">
                 <span class="review-game-name">
