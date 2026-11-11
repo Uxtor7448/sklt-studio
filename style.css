@@ -12,7 +12,7 @@
 }
 
 :root {
-    --bg-tint: rgba(5, 0, 5, 0.95);
+    --bg-tint: rgba(18, 0, 18, 0.9);
     --bg-image: url('images/glitch1.gif');
 }
 
@@ -175,7 +175,7 @@ a {
     max-width: 500px;
     width: 100%;
     height: auto;
-    border-radius: 24px;
+    border-radius: 0px;
     background: #050505;
 }
 
@@ -417,6 +417,7 @@ a {
 }
 
 .project-link:hover {
+    border: 1px solid rgb(255, 255, 255);
     background: #6e3143;
     transform: scale(0.98);
 }
@@ -644,8 +645,8 @@ a {
 }
 
 .social-links a:hover {
-    color: #ff2d55;
-    transform: scale(1.1) translateY(-3px);
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 .copyright {
